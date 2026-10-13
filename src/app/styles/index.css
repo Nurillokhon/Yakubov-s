@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+@import './tokens.css';
+@import './material-web.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Expose the Material 3 roles as Tailwind colors: bg-primary, text-on-surface, border-outline-variant, ... */
+@theme inline {
+  --font-sans: Helvetica, Arial, system-ui, sans-serif;
+
+  /* Material 3 window size classes: compact is the default, then medium:, expanded:, large: */
+  --breakpoint-medium: 37.5rem;
+  --breakpoint-expanded: 52.5rem;
+  --breakpoint-large: 75rem;
+
+  --color-primary: var(--md-sys-color-primary);
+  --color-on-primary: var(--md-sys-color-on-primary);
+  --color-primary-container: var(--md-sys-color-primary-container);
+  --color-on-primary-container: var(--md-sys-color-on-primary-container);
+  --color-secondary: var(--md-sys-color-secondary);
+  --color-on-secondary: var(--md-sys-color-on-secondary);
+  --color-secondary-container: var(--md-sys-color-secondary-container);
+  --color-on-secondary-container: var(--md-sys-color-on-secondary-container);
+  --color-tertiary: var(--md-sys-color-tertiary);
+  --color-on-tertiary: var(--md-sys-color-on-tertiary);
+  --color-tertiary-container: var(--md-sys-color-tertiary-container);
+  --color-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+  --color-error: var(--md-sys-color-error);
+  --color-on-error: var(--md-sys-color-on-error);
+  --color-error-container: var(--md-sys-color-error-container);
+  --color-on-error-container: var(--md-sys-color-on-error-container);
+  --color-background: var(--md-sys-color-background);
+  --color-on-background: var(--md-sys-color-on-background);
+  --color-surface: var(--md-sys-color-surface);
+  --color-on-surface: var(--md-sys-color-on-surface);
+  --color-surface-variant: var(--md-sys-color-surface-variant);
+  --color-on-surface-variant: var(--md-sys-color-on-surface-variant);
+  --color-surface-dim: var(--md-sys-color-surface-dim);
+  --color-surface-bright: var(--md-sys-color-surface-bright);
+  --color-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+  --color-surface-container-low: var(--md-sys-color-surface-container-low);
+  --color-surface-container: var(--md-sys-color-surface-container);
+  --color-surface-container-high: var(--md-sys-color-surface-container-high);
+  --color-surface-container-highest: var(--md-sys-color-surface-container-highest);
+  --color-outline: var(--md-sys-color-outline);
+  --color-outline-variant: var(--md-sys-color-outline-variant);
+  --color-inverse-surface: var(--md-sys-color-inverse-surface);
+  --color-inverse-on-surface: var(--md-sys-color-inverse-on-surface);
+  --color-inverse-primary: var(--md-sys-color-inverse-primary);
+  --color-scrim: var(--md-sys-color-scrim);
+
+  /* App colors that are not Material roles: status pills and department chips. */
+  --color-status-active: var(--app-color-status-active);
+  --color-on-status-active: var(--app-color-on-status-active);
+  --color-status-leave: var(--app-color-status-leave);
+  --color-on-status-leave: var(--app-color-on-status-leave);
+  --color-status-inactive: var(--app-color-status-inactive);
+  --color-on-status-inactive: var(--app-color-on-status-inactive);
+  --color-dept-admin: var(--app-color-dept-admin);
+  --color-on-dept-admin: var(--app-color-on-dept-admin);
+  --color-dept-math: var(--app-color-dept-math);
+  --color-on-dept-math: var(--app-color-on-dept-math);
+  --color-dept-science: var(--app-color-dept-science);
+  --color-on-dept-science: var(--app-color-on-dept-science);
+  --color-dept-lang: var(--app-color-dept-lang);
+  --color-on-dept-lang: var(--app-color-on-dept-lang);
+  --color-dept-it: var(--app-color-dept-it);
+  --color-on-dept-it: var(--app-color-on-dept-it);
+  --color-dept-other: var(--app-color-dept-other);
+  --color-on-dept-other: var(--app-color-on-dept-other);
+}
+
+:root {
+  color-scheme: light;
+  --md-ref-typeface-brand: var(--font-sans);
+  --md-ref-typeface-plain: var(--font-sans);
+
+  /* Softer corners for form fields and menus, in line with the rest of the UI. */
+  --md-outlined-text-field-container-shape: 12px;
+  --md-outlined-select-text-field-container-shape: 12px;
+  --md-menu-container-shape: 12px;
+
+  /* The palette asks for a solid Blue 700 on hover instead of Material's translucent overlay. */
+  --md-filled-button-hover-state-layer-color: var(--app-color-primary-hover);
+  --md-filled-button-hover-state-layer-opacity: 1;
+  --md-filled-button-pressed-state-layer-color: var(--app-color-primary-hover);
+  --md-filled-button-pressed-state-layer-opacity: 1;
+  --md-filled-icon-button-hover-state-layer-color: var(--app-color-primary-hover);
+  --md-filled-icon-button-hover-state-layer-opacity: 1;
+  --md-filled-icon-button-pressed-state-layer-color: var(--app-color-primary-hover);
+  --md-filled-icon-button-pressed-state-layer-opacity: 1;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+}

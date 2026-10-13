@@ -1,0 +1,9 @@
+/* Reshapes Material's filled select into a pill that matches the search bar next to it. */
+.employee-filter-select {
+  --md-filled-select-text-field-container-shape: 28px;
+  --md-filled-select-text-field-container-color: var(--md-sys-color-surface-container-high);
+  --md-filled-select-text-field-active-indicator-height: 0px;
+  --md-filled-select-text-field-hover-active-indicator-height: 0px;
+  --md-filled-select-text-field-focus-active-indicator-height: 0px;
+  --md-menu-container-shape: 16px;
+}

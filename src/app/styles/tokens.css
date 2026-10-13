@@ -1,0 +1,159 @@
+/*
+ * Material Design 3 color roles, filled from the school's "International Academy Precision" palette:
+ *   Brand blue  600 #2563EB primary, 700 #1D4ED8 hover, 100 #DBEAFE avatar fill, 50 #EFF6FF tint
+ *   Slate       #F8FAFC canvas, #FFFFFF cards, #F1F5F9 inputs, #E2E8F0 borders,
+ *               #475569 secondary labels, #0F172A headings
+ * The palette only specifies a light theme. The dark values are derived from it
+ * (Blue 300 accent, Blue 900 containers, Slate 900 canvas).
+ * Status and department colors are not Material roles; they are the --app-color-* tokens.
+ */
+:root {
+  --md-sys-color-primary: #2563eb;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #dbeafe;
+  --md-sys-color-on-primary-container: #1d4ed8;
+  --md-sys-color-secondary: #1d4ed8;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #dbeafe;
+  --md-sys-color-on-secondary-container: #1e3a8a;
+  --md-sys-color-tertiary: #4338ca;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #eef2ff;
+  --md-sys-color-on-tertiary-container: #4338ca;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #93000a;
+  --md-sys-color-background: #f8fafc;
+  --md-sys-color-on-background: #0f172a;
+  --md-sys-color-surface: #f8fafc;
+  --md-sys-color-on-surface: #0f172a;
+  --md-sys-color-surface-variant: #e2e8f0;
+  --md-sys-color-on-surface-variant: #475569;
+  --md-sys-color-surface-dim: #e2e8f0;
+  --md-sys-color-surface-bright: #f8fafc;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f8fafc;
+  --md-sys-color-surface-container: #f1f5f9;
+  --md-sys-color-surface-container-high: #f1f5f9;
+  --md-sys-color-surface-container-highest: #e2e8f0;
+  /* Form field outlines need more contrast than the Slate 200 used for card borders. */
+  --md-sys-color-outline: #64748b;
+  --md-sys-color-outline-variant: #e2e8f0;
+  --md-sys-color-inverse-surface: #0f172a;
+  --md-sys-color-inverse-on-surface: #f1f5f9;
+  --md-sys-color-inverse-primary: #93c5fd;
+  --md-sys-color-surface-tint: #2563eb;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-primary-fixed: #dbeafe;
+  --md-sys-color-primary-fixed-dim: #93c5fd;
+  --md-sys-color-on-primary-fixed: #1e3a8a;
+  --md-sys-color-on-primary-fixed-variant: #1d4ed8;
+  --md-sys-color-secondary-fixed: #dbeafe;
+  --md-sys-color-secondary-fixed-dim: #93c5fd;
+  --md-sys-color-on-secondary-fixed: #1e3a8a;
+  --md-sys-color-on-secondary-fixed-variant: #1d4ed8;
+  --md-sys-color-tertiary-fixed: #eef2ff;
+  --md-sys-color-tertiary-fixed-dim: #c7d2fe;
+  --md-sys-color-on-tertiary-fixed: #312e81;
+  --md-sys-color-on-tertiary-fixed-variant: #4338ca;
+
+  --app-color-primary-hover: #1d4ed8;
+
+  --app-color-status-active: #dcfce7;
+  --app-color-on-status-active: #15803d;
+  --app-color-status-leave: #fef3c7;
+  --app-color-on-status-leave: #b45309;
+  --app-color-status-inactive: #f1f5f9;
+  --app-color-on-status-inactive: #64748b;
+
+  --app-color-dept-admin: #eff6ff;
+  --app-color-on-dept-admin: #1d4ed8;
+  --app-color-dept-math: #eef2ff;
+  --app-color-on-dept-math: #4338ca;
+  --app-color-dept-science: #f0fdfa;
+  --app-color-on-dept-science: #0f766e;
+  --app-color-dept-lang: #fffbeb;
+  --app-color-on-dept-lang: #b45309;
+  --app-color-dept-it: #f0f9ff;
+  --app-color-on-dept-it: #0369a1;
+  /* Departments the palette does not name. */
+  --app-color-dept-other: #f1f5f9;
+  --app-color-on-dept-other: #475569;
+}
+
+.dark {
+  --md-sys-color-primary: #93c5fd;
+  --md-sys-color-on-primary: #1e3a8a;
+  --md-sys-color-primary-container: #1e3a8a;
+  --md-sys-color-on-primary-container: #dbeafe;
+  --md-sys-color-secondary: #93c5fd;
+  --md-sys-color-on-secondary: #1e3a8a;
+  --md-sys-color-secondary-container: #1e3a8a;
+  --md-sys-color-on-secondary-container: #dbeafe;
+  --md-sys-color-tertiary: #a5b4fc;
+  --md-sys-color-on-tertiary: #312e81;
+  --md-sys-color-tertiary-container: #3730a3;
+  --md-sys-color-on-tertiary-container: #e0e7ff;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+  --md-sys-color-background: #0f172a;
+  --md-sys-color-on-background: #f1f5f9;
+  --md-sys-color-surface: #0f172a;
+  --md-sys-color-on-surface: #f1f5f9;
+  --md-sys-color-surface-variant: #334155;
+  --md-sys-color-on-surface-variant: #94a3b8;
+  --md-sys-color-surface-dim: #0f172a;
+  --md-sys-color-surface-bright: #334155;
+  --md-sys-color-surface-container-lowest: #0b1120;
+  --md-sys-color-surface-container-low: #172033;
+  --md-sys-color-surface-container: #1e293b;
+  --md-sys-color-surface-container-high: #1e293b;
+  --md-sys-color-surface-container-highest: #334155;
+  --md-sys-color-outline: #64748b;
+  --md-sys-color-outline-variant: #334155;
+  --md-sys-color-inverse-surface: #f1f5f9;
+  --md-sys-color-inverse-on-surface: #0f172a;
+  --md-sys-color-inverse-primary: #2563eb;
+  --md-sys-color-surface-tint: #93c5fd;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-primary-fixed: #dbeafe;
+  --md-sys-color-primary-fixed-dim: #93c5fd;
+  --md-sys-color-on-primary-fixed: #1e3a8a;
+  --md-sys-color-on-primary-fixed-variant: #1d4ed8;
+  --md-sys-color-secondary-fixed: #dbeafe;
+  --md-sys-color-secondary-fixed-dim: #93c5fd;
+  --md-sys-color-on-secondary-fixed: #1e3a8a;
+  --md-sys-color-on-secondary-fixed-variant: #1d4ed8;
+  --md-sys-color-tertiary-fixed: #eef2ff;
+  --md-sys-color-tertiary-fixed-dim: #c7d2fe;
+  --md-sys-color-on-tertiary-fixed: #312e81;
+  --md-sys-color-on-tertiary-fixed-variant: #4338ca;
+
+  --app-color-primary-hover: #bfdbfe;
+
+  --app-color-status-active: #14532d;
+  --app-color-on-status-active: #86efac;
+  --app-color-status-leave: #78350f;
+  --app-color-on-status-leave: #fcd34d;
+  --app-color-status-inactive: #1e293b;
+  --app-color-on-status-inactive: #94a3b8;
+
+  /* One step lighter than the Blue 900 card panel it sits on. */
+  --app-color-dept-admin: #1d4ed8;
+  --app-color-on-dept-admin: #dbeafe;
+  --app-color-dept-math: #312e81;
+  --app-color-on-dept-math: #c7d2fe;
+  --app-color-dept-science: #134e4a;
+  --app-color-on-dept-science: #99f6e4;
+  --app-color-dept-lang: #78350f;
+  --app-color-on-dept-lang: #fde68a;
+  --app-color-dept-it: #0c4a6e;
+  --app-color-on-dept-it: #bae6fd;
+  --app-color-dept-other: #1e293b;
+  --app-color-on-dept-other: #cbd5e1;
+}

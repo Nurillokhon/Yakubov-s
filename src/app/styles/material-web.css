@@ -1,0 +1,67 @@
+/*
+ * Tailwind's reset zeroes box-sizing, margin, padding and border on every element, and page
+ * styles always beat a component's own :host styles. Hand those four back to Material Web.
+ */
+@layer base {
+  :where(
+    md-assist-chip,
+    md-badge,
+    md-branded-fab,
+    md-checkbox,
+    md-chip-set,
+    md-circular-progress,
+    md-dialog,
+    md-divider,
+    md-elevated-button,
+    md-elevated-card,
+    md-elevation,
+    md-fab,
+    md-filled-button,
+    md-filled-card,
+    md-filled-field,
+    md-filled-icon-button,
+    md-filled-select,
+    md-filled-text-field,
+    md-filled-tonal-button,
+    md-filled-tonal-icon-button,
+    md-filter-chip,
+    md-focus-ring,
+    md-icon,
+    md-icon-button,
+    md-input-chip,
+    md-item,
+    md-linear-progress,
+    md-list,
+    md-list-item,
+    md-menu,
+    md-menu-item,
+    md-navigation-bar,
+    md-navigation-drawer,
+    md-navigation-drawer-modal,
+    md-navigation-tab,
+    md-outlined-button,
+    md-outlined-card,
+    md-outlined-field,
+    md-outlined-icon-button,
+    md-outlined-segmented-button,
+    md-outlined-segmented-button-set,
+    md-outlined-select,
+    md-outlined-text-field,
+    md-primary-tab,
+    md-radio,
+    md-ripple,
+    md-secondary-tab,
+    md-select-option,
+    md-slider,
+    md-sub-menu,
+    md-suggestion-chip,
+    md-switch,
+    md-tabs,
+    md-text-button
+  ) {
+    box-sizing: revert-layer;
+    margin: revert-layer;
+    padding: revert-layer;
+    border: revert-layer;
+  }
+}
