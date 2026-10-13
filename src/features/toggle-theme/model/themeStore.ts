@@ -11,7 +11,7 @@ interface ThemeState {
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set) => ({
-      mode: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+      mode: 'light',
       toggleMode: () => set((state) => ({ mode: state.mode === 'dark' ? 'light' : 'dark' })),
     }),
     { name: 'theme' },
